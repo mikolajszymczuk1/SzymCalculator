@@ -40,6 +40,14 @@
     color: white;
 }
 
+.calculator__button--short {
+    flex-basis: 20%;
+}
+
+.calculator__button--long {
+    flex-basis: 40%;
+}
+
 .calculator__row > .calculator__button {
     margin: 0 5px;
 }
