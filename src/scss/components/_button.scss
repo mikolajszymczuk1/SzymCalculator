@@ -13,7 +13,8 @@
     background-color: $color-a;
     box-shadow: 0 5px $color-c;
     transition: background-color 100ms,
-                color 100ms;
+                color 100ms,
+                transform 100ms ease-out;
 
     font-size: 3em;
     font-weight: bold;
@@ -75,5 +76,12 @@
     
     .calculator__column > .calculator__button {
         margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .calculator__button:hover {
+        transform: scale(0.9);
+        cursor: pointer;
     }
 }
