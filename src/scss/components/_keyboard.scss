@@ -1,0 +1,39 @@
+.calculator__keyboard {
+    display: flex;
+    flex-direction: row;
+
+    height: 80%;
+}
+
+.calculator__column {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 5px;
+}
+
+.calculator__column--left {
+    flex-basis: 80%;
+}
+
+.calculator__column--right {
+    flex-basis: 20%;
+}
+
+.calculator__row {
+    display: flex;
+    flex-direction: row;
+    
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .calculator__column {
+        margin-right: 15px;
+    }
+
+    .calculator__row {
+        margin-bottom: 20px;
+    }
+}
