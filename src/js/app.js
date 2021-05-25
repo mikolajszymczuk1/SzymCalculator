@@ -2,7 +2,8 @@ import { addition, subtraction, multiplication, division } from "./operations.js
 import checkNumber from "./helpers.js";
 
 const keyboard = document.querySelector(".calculator__keyboard");
-const screen = document.querySelector(".calculator__screen");
+const output = document.querySelector(".calculator__output");
+const screen_operation_type = document.querySelector(".calculator__operation-type");
 
 let result = 0;
 let operationType = "";
@@ -19,19 +20,19 @@ keyboard.addEventListener("click", (e) => {
 function controller(op) {
     switch(op) {
         case "÷":
-            operationType = "division";
+            operationType = "÷";
             break;
     
-        case "*":
-            operationType = "multiplication";
+        case "x":
+            operationType = "x";
             break;
 
         case "-":
-            operationType = "subtraction";
+            operationType = "-";
             break;
 
         case "+":
-            operationType = "addition";
+            operationType = "+";
             break;
         
         case "=":
@@ -42,25 +43,25 @@ function controller(op) {
             numberB = parseFloat(numberB);
 
             switch(operationType) {
-                case "addition":
+                case "+":
                     result = addition(numberA, numberB);
                     break;
                 
-                case "subtraction":
+                case "-":
                     result = subtraction(numberA, numberB);
                     break;
                 
-                case "multiplication":
+                case "x":
                     result = multiplication(numberA, numberB);
                     break;
 
-                case "division":
+                case "÷":
                     result = division(numberA, numberB);
                     break;
             }
             
             // Show output
-            screen.innerText = result.toString();
+            output.innerText = result.toString();
             
             // Reset values after operation
             result = 0;
@@ -73,6 +74,8 @@ function controller(op) {
         default:
             addNumber(op);
     }
+
+    screen_operation_type.innerText = operationType;
 }
 
 // Function add next number to numberA or numberB
@@ -80,12 +83,12 @@ function addNumber(number) {
     if (operationType === "") {
         if (checkNumber(number, numberA)) {
             numberA += number;
-            screen.innerText = numberA;
+            output.innerText = numberA;
         } 
     } else {
         if (checkNumber(number, numberB)) {
             numberB += number;
-            screen.innerText = numberB;
+            output.innerText = numberB;
         }
     }
 }
