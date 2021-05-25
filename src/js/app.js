@@ -1,5 +1,5 @@
 import { addition, subtraction, multiplication, division } from "./operations.js";
-import checkNumber from "./helpers.js";
+import { checkNumber, addNumber } from "./helpers.js";
 
 const keyboard = document.querySelector(".calculator__keyboard");
 const output = document.querySelector(".calculator__output");
@@ -72,23 +72,16 @@ function controller(op) {
             break;
 
         default:
-            addNumber(op);
+            if (operationType === "") {
+                if (checkNumber(op, numberA)) {
+                    numberA = addNumber(op, numberA, output);
+                }
+            } else {
+                if (checkNumber(op, numberB, output)) {
+                    numberB = addNumber(op, numberB, output);
+                }
+            }
     }
 
     screen_operation_type.innerText = operationType;
-}
-
-// Function add next number to numberA or numberB
-function addNumber(number) {
-    if (operationType === "") {
-        if (checkNumber(number, numberA)) {
-            numberA += number;
-            output.innerText = numberA;
-        } 
-    } else {
-        if (checkNumber(number, numberB)) {
-            numberB += number;
-            output.innerText = numberB;
-        }
-    }
 }
