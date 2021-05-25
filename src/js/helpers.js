@@ -19,4 +19,11 @@ function checkNumber(num, toCheck) {
     return true;
 }
 
-export default checkNumber;
+// Function add next number to numberA or numberB
+function addNumber(operation, number, outDiv) {
+    let newNumber = number + operation;
+    outDiv.innerText = newNumber;
+    return newNumber;
+}
+
+export { checkNumber, addNumber };
