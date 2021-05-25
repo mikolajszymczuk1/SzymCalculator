@@ -19,42 +19,42 @@
     <!-- Container for single calculator -->
     <div class="calculator">
         <!-- div for math output -->
-        <div class="calculator__screen">10+19</div>
+        <div class="calculator__screen"></div>
     
         <div class="calculator__keyboard">
             <!-- Numbers from 0 to 9 and . + operations -->
             <div class="calculator__column calculator__column--left">
                 <div class="calculator__row">
-                    <button class="calculator__button">7</button>
-                    <button class="calculator__button">8</button>
-                    <button class="calculator__button">9</button>
+                    <button class="calculator__button" data-operation="7">7</button>
+                    <button class="calculator__button" data-operation="8">8</button>
+                    <button class="calculator__button" data-operation="9">9</button>
                 </div>
 
                 <div class="calculator__row">
-                    <button class="calculator__button">4</button>
-                    <button class="calculator__button">5</button>
-                    <button class="calculator__button">6</button>
+                    <button class="calculator__button" data-operation="4">4</button>
+                    <button class="calculator__button" data-operation="5">5</button>
+                    <button class="calculator__button" data-operation="6">6</button>
                 </div>
                 
                 <div class="calculator__row">
-                    <button class="calculator__button">1</button>
-                    <button class="calculator__button">2</button>
-                    <button class="calculator__button">3</button>
+                    <button class="calculator__button" data-operation="1">1</button>
+                    <button class="calculator__button" data-operation="2">2</button>
+                    <button class="calculator__button" data-operation="3">3</button>
                 </div>
                 
                 <div class="calculator__row">
-                    <button class="calculator__button">0</button>
-                    <button class="calculator__button calculator__button--symbol">.</button>
-                    <button class="calculator__button calculator__button--symbol">+</button>
+                    <button class="calculator__button" data-operation="0">0</button>
+                    <button class="calculator__button calculator__button--symbol" data-operation=".">.</button>
+                    <button class="calculator__button calculator__button--symbol" data-operation="+">+</button>
                 </div>
             </div>
 
             <!-- / * - = operations -->
             <div class="calculator__column calculator__column--right">
-                <button class="calculator__button calculator__button--symbol calculator__button--short">÷</button>
-                <button class="calculator__button calculator__button--symbol calculator__button--short">*</button>
-                <button class="calculator__button calculator__button--symbol calculator__button--short">-</button>
-                <button class="calculator__button calculator__button--special calculator__button--long">=</button>
+                <button class="calculator__button calculator__button--symbol calculator__button--short" data-operation="÷">÷</button>
+                <button class="calculator__button calculator__button--symbol calculator__button--short" data-operation="*">*</button>
+                <button class="calculator__button calculator__button--symbol calculator__button--short" data-operation="-">-</button>
+                <button class="calculator__button calculator__button--special calculator__button--long" data-operation="=">=</button>
             </div>
         </div>
     </div>
