@@ -19,7 +19,10 @@
     <!-- Container for single calculator -->
     <div class="calculator">
         <!-- div for math output -->
-        <div class="calculator__screen"></div>
+        <div class="calculator__screen">
+            <div class="calculator__output"></div>
+            <div class="calculator__operation-type"></div>
+        </div>
     
         <div class="calculator__keyboard">
             <!-- Numbers from 0 to 9 and . + operations -->
@@ -52,7 +55,7 @@
             <!-- / * - = operations -->
             <div class="calculator__column calculator__column--right">
                 <button class="calculator__button calculator__button--symbol calculator__button--short" data-operation="÷">÷</button>
-                <button class="calculator__button calculator__button--symbol calculator__button--short" data-operation="*">*</button>
+                <button class="calculator__button calculator__button--symbol calculator__button--short" data-operation="x">x</button>
                 <button class="calculator__button calculator__button--symbol calculator__button--short" data-operation="-">-</button>
                 <button class="calculator__button calculator__button--special calculator__button--long" data-operation="=">=</button>
             </div>
