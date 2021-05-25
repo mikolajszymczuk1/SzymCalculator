@@ -2,8 +2,7 @@
 
 .calculator__screen {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
 
     margin-bottom: 15px;
     height: 20%;
@@ -12,28 +11,58 @@
     border-radius: 15px;
     // border: solid 4px $color-c;
     box-shadow: 0 5px $color-c;
+    overflow: hidden;
 
     letter-spacing: 2px;
-    font-size: 1.5em;
     color: $color-d;
 }
 
+.calculator__output {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-basis: 90%;
+
+    padding-left: 20%;
+
+    overflow-x: auto;
+
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.calculator__operation-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 10%;
+
+    background-color: $color-a;
+    font-size: 2.5em;
+}
+
 @media screen and (min-width: 425px) {
-    .calculator__screen {
-        font-size: 2em;
+    .calculator__output {
+        font-size: 1.8em;
     }
 }
 
 @media screen and (min-width: 768px) {
     .calculator__screen {
-        margin: 0 15px 25px 15px;
+        margin: 0 15px 25px 15px
+    }
 
+    .calculator__output {
         font-size: 2.5em;
+    }
+
+    .calculator__operation-type {
+        font-size: 3em;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .calculator__screen {
+    .calculator__output {
         font-size: 3vh;
     }
 }
